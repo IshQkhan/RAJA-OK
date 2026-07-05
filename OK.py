@@ -39,46 +39,56 @@ print('loading Modules ...\n')
 os.system('clear')
 os.system('xdg-open https://youtu.be/Rx4eNsxjCbE?si=PEa1vc3uShrxG723')
 os.system('xdg-open https://youtu.be/Rx4eNsxjCbE?si=PEa1vc3uShrxG723')
-
-import os, sys
-
-# Tumhara WhatsApp channel link
-channel_link = "https://youtube.com/shorts/6BJiCKWlIm4?si=BKvmJmkyNifwXeXL"
-
-# Valid keys (channel par available hogi)
-approved_keys = ["RAJA CLONER 420 YTUBER KING"]
-
-def first_step():
-    os.system("clear")
-    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    print("        🔒 Script Locked 🔒")
-    print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n")
-    print("\033[1;32m JOIN OUR WHATSAPP CHANNEL ✅ \033[0m\n")
-    print("\033[1;32m KEY APKO CHANEL SA MILY GI ✅ \033[0m\n")
-    print("[!] Pehle WhatsApp Channel par join karo.")
-    print(f"[+] Channel Link: {channel_link}\n")
-
-    # Yeh direct WhatsApp channel open karega
-    os.system(f"xdg-open {channel_link}")
-
-    input("\n[↩] Jab join kar lo tab Enter dabao...")
-
-def check_key():
-    user_key = input("\n[?] Enter your key: ")
-    if user_key in approved_keys:
-        print("\n[✓] Key approved! Script is running...\n")
-    else:
-        print("\n[×] Invalid key! Dobara Channel par jao.")
+# --- GITHUB APPROVAL SYSTEM ---
+def raja_approval():
+    os.system('clear')
+    # Aapka unique key identifier
+    uuid_raw = str(os.getlogin()) + str(os.getuid())
+    key = hashlib.md5(uuid_raw.encode()).hexdigest().upper()[:12]
+    
+    # Yahan apni GitHub link lagayein jahan approved keys hongi
+    # Format: Raw text file on GitHub
+    github_link = "https://github.com/IshQkhan/Old-Clone/blob/main/APROVEL-78"
+    
+    print('''
+\033[1;31m ██████╗  █████╗      ██╗ █████\x1b[0m╗ 
+\033[1;32m ██╔══██╗██╔══██╗     ██║██╔══██╗\x1b[0m
+\033[1;33m ██████╔╝███████║     ██║███████║\x1b[0m
+\033[1;34m ██╔══██╗██╔══██║██   ██║██╔══██║\x1b[0m
+\033[1;35m ██║  ██║██║  ██║╚█████╔╝██║  ██║\x1b[0m
+\033[1;36m ╚═╝  ╚═╝╚═╝  ╚═╝ ╚════╝ ╚═╝  ╚═╝\x1b[0m''')
+    print('\x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+    print(f"\x1b[1;37m YOUR KEY : \x1b[1;32mRAJA-{key}")
+    print('\x1b[38;5;48m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+    print("\033[1;36m💵 Available TOOL PRICES\033[0m")
+    print("\033[1;31m" + "━" * 40 + "\033[0m")
+    print("\033[1;32m[1] 5 Dollars 7 days \033[0m")
+    print("\033[1;33m[2] 10 Dollars 15 days \033[0m")
+    print("\033[1;34m[3] 18 Dollars 30 days \033[0m")
+    print("\033[1;31m" + "━" * 40 + "\033[0m")
+    print(" \x1b[1;37mStatus: \x1b[1;31mChecking Approval...")
+    
+    try:
+        response = requests.get(github_link).text
+        if f"RAJA-{key}" in response:
+            print(" \33[32;41m\t Welcome RAJA TOOL 🔥\33[0;m.")
+            time.sleep(2)
+        else:
+            print(" \x1b[1;31mKey Is Not Approved Please Contact The Admin .")
+            os.system(f'xdg-open https://wa.me/+923229120975?text=Mera-Key-Approve-Kardo-RAJA-{key}')
+            sys.exit()
+    except:
         sys.exit()
 
-# Pehle channel open hoga
-first_step()
+# Initial setup and promotion
+raja_approval() # Sabse pehle approval check hoga
 
-# Phir key check hoga
-check_key()
-
-# Tool ka main code yahan likho
-print(">>> Tool Successfully Unlocked <<<")
+os.system('clear')
+os.system('pip uninstall requests chardet urllib3 idna certifi -y;pip install chardet urllib3 idna certifi requests')
+os.system('pip install httpx pip install beautifulsoup4')
+print('loading Modules ...\n')
+os.system('clear')
+os.system('xdg-open https://chat.whatsapp.com/JX01XMReYrYBsQSrS1IL8N')
 
 
 
